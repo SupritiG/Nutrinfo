@@ -1,0 +1,371 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sgupta.nutrinfo.DisplayNutritionActivity">
+
+    <TextView android:text="Serving :" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="15sp"
+        android:padding="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/space"
+        android:layout_toEndOf="@+id/space"
+        android:foreground="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_serving"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentTop="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/spinner_serving"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/space" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorDivider"
+        android:id="@+id/line_view"
+        android:layout_below="@+id/spinner_serving"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/percent_layout">
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_calories"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorCalories"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_proteins"
+            android:textStyle="bold"
+            android:textColor="@color/colorProteins" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_sugar"
+            android:textStyle="bold"
+            android:textColor="@color/colorFats" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_carbs"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorCarbs" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/percent_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/progress_bar_layout">
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_calories"
+            android:progress="66"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/progress_drawable"/>
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_proteins"
+            android:progress="66"
+            android:progressDrawable="@drawable/progress_drawable_green"/>
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_sugar"
+            android:progress="66"
+            android:progressDrawable="@drawable/progress_drawable_orange"/>
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_carbs"
+            android:progress="66"
+            android:progressDrawable="@drawable/progress_drawable_magenta"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_bar_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/values_layout">
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="Calories"
+            android:id="@+id/text_calories"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/colorCalories" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="Proteins"
+            android:id="@+id/text_proteins"
+            android:textSize="15sp"
+            android:textColor="@color/colorProteins" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="T. Fats"
+            android:id="@+id/text_sugar"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/colorFats" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="T. Carbs"
+            android:id="@+id/text_carbs"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/colorCarbs" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/values_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/nutrient_values_layout"
+        android:gravity="center_horizontal|left">
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="Calories"
+            android:id="@+id/value_calories"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="Proteins"
+            android:id="@+id/value_proteins"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="T. Fats"
+            android:id="@+id/value_sugar"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="T.Carbs"
+            android:id="@+id/value_carbs"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorDivider"
+        android:id="@+id/line2_view"
+        android:layout_below="@+id/nutrient_values_layout"
+        android:layout_marginTop="5dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_nutrients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2_view"
+        android:scrollbars="vertical" />
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space"
+        android:layout_toRightOf="@+id/space"
+        android:layout_toEndOf="@+id/space"
+        android:id="@+id/relativeLayout">
+
+
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_calories"
+            android:progress="66"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_calories"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Calories"
+            android:id="@+id/text_calories"
+            android:layout_below="@+id/progress_calories"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"/>
+
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_proteins"
+            android:progress="66"
+            android:layout_below="@+id/view"
+            android:layout_toLeftOf="@+id/progress_sugar"
+            android:layout_toStartOf="@+id/progress_sugar"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_proteins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_toLeftOf="@+id/progress_sugar"
+            android:layout_toStartOf="@+id/progress_sugar"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="55dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Proteins"
+            android:id="@+id/text_proteins"
+            android:layout_below="@+id/progress_proteins"
+            android:layout_toLeftOf="@+id/progress_sugar"
+            android:layout_toStartOf="@+id/progress_sugar"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="50dp" />
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_sugar"
+            android:progress="66"
+            android:layout_below="@+id/view"
+            android:layout_marginRight="75dp"
+            android:layout_marginEnd="53dp"
+            android:layout_toLeftOf="@+id/progress_carbs"
+            android:layout_toStartOf="@+id/progress_carbs" />
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_sugar"
+            android:layout_below="@+id/view"
+            android:layout_marginRight="60dp"
+            android:layout_marginEnd="53dp"
+            android:layout_toLeftOf="@+id/progress_carbs"
+            android:layout_toStartOf="@+id/progress_carbs"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sugar"
+            android:id="@+id/text_sugar"
+            android:layout_below="@+id/progress_sugar"
+            android:layout_marginRight="60dp"
+            android:layout_marginEnd="53dp"
+            android:layout_toLeftOf="@+id/progress_carbs"
+            android:layout_toStartOf="@+id/progress_carbs" />
+
+        <ProgressBar
+            style="@style/NutrientProgressBar"
+            android:id="@+id/progress_carbs"
+            android:progress="66"
+            android:layout_below="@+id/view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="47dp" />
+
+
+        <TextView
+            style="@style/NutrientPercentText"
+            android:text="100%"
+            android:id="@+id/percent_carbs"
+            android:layout_below="@+id/view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="47dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Carbs"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/progress_proteins"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="47dp" />
+
+
+    </RelativeLayout>-->
+
+
+
+</RelativeLayout>

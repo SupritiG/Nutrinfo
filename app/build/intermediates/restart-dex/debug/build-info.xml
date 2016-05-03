@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxhdpi"
+    format="7"
+    timestamp="3343889959582" >
+
+    <task
+        name="javac"
+        duration="3421" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="59" />
+    <task
+        name="verifier"
+        duration="11" />
+
+    <artifact
+        location="C:\Users\Supriti\Desktop\Nutri_Info_Latest-2016-04-29\Nutri_Info_Latest\Nutrinfo\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Supriti\Desktop\Nutri_Info_Latest-2016-04-29\Nutri_Info_Latest\Nutrinfo\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
+
+    <build timestamp="2312797982438" >
+        <artifact
+            location="C:\Users\Supriti\Desktop\Nutri_Info_Latest-2016-04-29\Nutri_Info_Latest\Nutrinfo\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="2674144968622"
+        verifier="STATIC_INITIALIZER_CHANGE" >
+        <artifact
+            location="C:\Users\Supriti\Desktop\Nutri_Info_Latest-2016-04-29\Nutri_Info_Latest\Nutrinfo\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+    <build timestamp="3343889959582" >
+        <artifact
+            location="C:\Users\Supriti\Desktop\Nutri_Info_Latest-2016-04-29\Nutri_Info_Latest\Nutrinfo\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Supriti\Desktop\Nutri_Info_Latest-2016-04-29\Nutri_Info_Latest\Nutrinfo\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

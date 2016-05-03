@@ -1,0 +1,192 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sgupta.nutrinfo.AddNewItemFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Add a new food item"
+        android:id="@+id/title1_add_new"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:textColor="@color/colorSecondaryText"
+        android:gravity="center"
+        android:background="@color/colorPrimaryLight"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            style="@style/AddItemEditText"
+            android:id="@+id/add_name"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint="Name"
+            android:layout_alignParentTop="true" />
+
+        <EditText
+            style="@style/AddItemEditText"
+            android:id="@+id/add_source"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint="Source"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/add_line_1"
+            android:layout_below="@+id/add_source"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            style="@style/AddItemTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="  Add Portion"
+            android:id="@+id/textView7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/add_line_1"
+            android:textColor="@color/colorAccent"
+            android:textIsSelectable="false"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/AddItemTextView"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Portion Name"
+            android:id="@+id/add_portion_label"
+            android:layout_below="@+id/textView7"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7" />
+
+        <EditText
+            style="@style/AddItemEditText"
+            android:id="@+id/add_portion_name"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView7"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/add_calories_label"
+            android:layout_toRightOf="@+id/add_calories_label" />
+
+        <TextView
+            style="@style/AddItemTextView"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Calories (kcal)"
+            android:id="@+id/add_calories_label"
+            android:layout_alignBottom="@+id/add_calories_value"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7" />
+
+        <EditText
+            style="@style/AddItemEditText"
+            android:id="@+id/add_calories_value"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_portion_label"
+            android:layout_alignLeft="@+id/add_portion_name"
+            android:layout_alignStart="@+id/add_portion_name"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/AddItemTextView"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Proteins (mg)"
+            android:id="@+id/add_proteins_label"
+            android:layout_alignBottom="@+id/add_proteins_value"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7" />
+
+        <EditText
+            style="@style/AddItemEditText"
+            android:id="@+id/add_proteins_value"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_calories_value"
+            android:layout_toRightOf="@+id/add_proteins_label"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/AddItemTextView"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total Carbs (mg)"
+            android:id="@+id/add_total_carbs_label"
+            android:layout_alignBottom="@+id/add_total_carbs_value"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7" />
+
+        <EditText
+            style="@style/AddItemEditText"
+            android:id="@+id/add_total_carbs_value"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_proteins_value"
+            android:layout_toRightOf="@+id/add_total_carbs_label"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/AddItemTextView"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total Fats (mg)"
+            android:id="@+id/add_total_fats_label"
+            android:layout_alignBottom="@+id/add_total_fats_value"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7" />
+
+        <EditText
+            style="@style/AddItemEditText"
+            android:id="@+id/add_total_fats_value"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_total_carbs_value"
+            android:layout_toRightOf="@+id/add_total_fats_label"
+            android:inputType="numberDecimal" />
+
+        <ImageButton
+            android:id="@+id/save_new_item_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:src="@drawable/ic_action_accept"
+            android:layout_below="@+id/add_total_fats_value"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

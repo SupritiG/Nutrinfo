@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Today&apos;s Recommendation"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:textColor="@color/colorSecondaryText"
+        android:gravity="center"
+        android:background="@color/colorPrimaryLight"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:id="@+id/recommended_item_image"
+            android:background="@drawable/banana_bread"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="3"/>
+
+        <RelativeLayout
+            android:layout_width="225dp"
+            android:layout_height="match_parent"
+            android:background="#FFF9C4">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Banana Bread with Walnut"
+                android:id="@+id/textView3"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="100g Portion"
+                android:id="@+id/textView4"
+                android:textColor="@color/colorAccent"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Calories : 312 kcal"
+                android:id="@+id/textView5"
+                android:padding="5dp"
+                android:textColor="@color/colorCalories"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Proteins : 11.8g"
+                android:id="@+id/textView6"
+                android:padding="5dp"
+                android:textColor="@color/colorFats"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:layout_below="@+id/textView5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/recommended_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_states"
+                android:text="+"
+                android:textColor="#fff"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:src="@drawable/ic_action_forward_light"
+                android:layout_margin="5dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Top Picks"
+        android:id="@+id/TopPicks"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:textColor="@color/colorSecondaryText"
+        android:gravity="center"
+        android:background="@color/colorPrimaryLight"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_recommended"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />-->
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview_toppicks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="100dp"
+        android:numColumns="2"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Supriti\\Desktop\\Nutri_Info_Latest-2016-04-29\\Nutri_Info_Latest\\Nutrinfo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\global.xml",
+        "source": "C:\\Users\\Supriti\\Desktop\\Nutri_Info_Latest-2016-04-29\\Nutri_Info_Latest\\Nutrinfo\\app\\src\\main\\res\\menu\\global.xml"
+    },
+    {
+        "merged": "C:\\Users\\Supriti\\Desktop\\Nutri_Info_Latest-2016-04-29\\Nutri_Info_Latest\\Nutrinfo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_display_nutrition.xml",
+        "source": "C:\\Users\\Supriti\\Desktop\\Nutri_Info_Latest-2016-04-29\\Nutri_Info_Latest\\Nutrinfo\\app\\src\\main\\res\\menu\\menu_display_nutrition.xml"
+    },
+    {
+        "merged": "C:\\Users\\Supriti\\Desktop\\Nutri_Info_Latest-2016-04-29\\Nutri_Info_Latest\\Nutrinfo\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Supriti\\Desktop\\Nutri_Info_Latest-2016-04-29\\Nutri_Info_Latest\\Nutrinfo\\app\\src\\main\\res\\menu\\main.xml"
+    }
+]

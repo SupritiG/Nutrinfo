@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:actionBarStyle">@style/MyActionBar</item>-->
+        <!--<item name="colorPrimary">#5ae1b5</item>
+        <item name="colorPrimaryDark">#3295c3</item>
+        <item name="colorAccent">#00ff85</item>-->
+        <item name="colorPrimary">#E91E63</item>
+        <item name="colorPrimaryDark">#FF4081</item>
+        <item name="colorAccent">#4CAF50</item>
+    </style>
+
+
+    <style name="NutrientsCardTitle" parent="android:Widget.TextView">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <!--<item name="android:layout_alignParentEnd">true</item>-->
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="NutrientsCardImage" parent="android:Widget.ImageWell">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="NutrientProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:max">100</item>
+        <item name="android:layout_weight">1</item>
+        <!--<item name="android:progressDrawable">@drawable/progress_drawable</item>-->
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingLeft">25dp</item>
+    </style>
+
+    <style name="NutrientPercentText" parent="android:Widget.TextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="AddItemEditText" parent="android:Widget.EditText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+    <style name="AddItemTextView" parent="android:Widget.TextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>
+
